@@ -1,8 +1,7 @@
-name: Photo gallery
+name: Family gallery
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:title/
-url: http://nadjetey.github.io/GridGallery/
+url: http://zaimov.github.io/FamilyGallery/
 author:
-    name: Nii Adjetey Sowah
-    twitter: #
+    name: Denislav Zaimov
