@@ -1,47 +1,37 @@
----
-layout: default
----
-<div class="container">
-	<header class="clearfix">
-		<h1>{{ site.name }}</h1>
-	</header>
-	<div id="grid-gallery" class="grid-gallery">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>グスタボのプロジェクト</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/keen-dashboards.css" />
+</head>
+<body class="application">
+  <div class="container-fluid">
+    <div id="container-row" class="row">
+    
+      <div class="col-sm-12">
+        <h1 class="text-center">グスタボのプロジェクト</h1>
+      </div>
 
-	<section class="grid-wrap">
-	<ul class="grid">
-		<li class="grid-sizer"></li><!-- for Masonry column width -->
-		{% for post in site.posts %}
-		<li>
-			<figure>
-				<img src="{{ site.url }}/img/thumb/{{ post.photo }}" alt="img"/>
-				<figcaption>
-					<h3>{{ post.caption_header}}</h3>
-					<p>{{ post.caption }}</p>
-				</figcaption>
-			</figure>
-		</li>
-		{% endfor %}
-	</ul>
-	</section><!-- // grid-wrap -->
+      <div class="col-sm-12" id="loading-message">
+        <p class="text-center">Loading data...</p>
+        <noscript><p>... only if JavaScript was enabled, of course.</p></noscript>
+      </div>
+    </div>
 
-	<section class="slideshow">
-	<ul>
-		{% for post in site.posts %}
-		<li>
-			<figure>
-				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
-				<figcaption><h3>{{ post.caption_header}}</h3><p>{{ post.caption }}</p></figcaption>
-			</figure>
-		</li>
-		{% endfor %}
-	</ul>
-	<nav>
-		<span class="icon nav-prev"></span>
-		<span class="icon nav-next"></span>
-		<span class="icon nav-close"></span>
-	</nav>
-	<div class="info-keys icon">Navigate with arrow keys</div>
-	</section><!-- // slideshow -->
+    <hr>
 
-	</div><!-- // grid-gallery -->
-</div>
+    <p class="small text-muted text-center">Built with &#9829; based on <a href="https://keen.io">Keen IO</a> styles |
+      <a href="https://qgustavor.tk">qgustavor's blog</a> |
+      Values based on Google Spreadsheet and maybe mismatch from MyAnimeList/HummingBird | 
+      English is used because I still don't have enough Japanese knowledge by now.</p>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+  <script src="https://cdn.rawgit.com/toorshia/justgage/1b27b6962f4082463dcb876fbf5c2ab3897b276b/justgage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.2/tabletop.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
